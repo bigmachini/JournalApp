@@ -1,6 +1,7 @@
 package net.bigmachini.challange.journalapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
@@ -13,7 +14,7 @@ import net.bigmachini.challange.journalapp.db.entities.JournalEntity;
 public class JournalDetailsActivity extends BaseActivity {
     JournalController mJournalController;
     Context mContext;
-    TextView tvTitle, tvJournal;
+    TextView tvTitle, tvJournal, tvDateCreated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +24,21 @@ public class JournalDetailsActivity extends BaseActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setVisibility(View.GONE);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(JournalDetailsActivity.this, JournalCreateActivity.class));
+            }
+        });
 
         mContext = JournalDetailsActivity.this;
         tvJournal = findViewById(R.id.tv_journal_entry);
         tvTitle = findViewById(R.id.tv_title);
+        tvDateCreated = findViewById(R.id.tv_date_created);
 
         JournalEntity journal = Constants.gSelectedEntry;
         tvTitle.setText(journal.getTitle());
         tvJournal.setText(journal.getJournalEntry());
+        tvDateCreated.setText(journal.getCreateAt().toString());
     }
 }

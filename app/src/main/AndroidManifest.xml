@@ -31,15 +31,14 @@
         <activity
             android:name=".JournalCreateActivity"
             android:label="@string/title_activity_journal_create"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".JournalDetailsActivity"
             android:label="@string/title_activity_journal_details"
-            android:parentActivityName=".JournalListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.bigmachini.challange.journalapp.JournalListActivity" />
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
+
     </application>
 
 </manifest>

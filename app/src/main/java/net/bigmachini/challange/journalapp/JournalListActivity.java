@@ -33,6 +33,7 @@ public class JournalListActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(JournalListActivity.this, JournalCreateActivity.class));
+                Constants.gSelectedEntry = null;
             }
         });
 

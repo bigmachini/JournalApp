@@ -16,7 +16,7 @@ public interface JournalDAO {
     @Query("SELECT * FROM journal_table WHERE id =:id")
     List<JournalEntity> getJournalsById(int id);
 
-    @Query("SELECT * FROM journal_table WHERE user_id =:userId")
+    @Query("SELECT * FROM journal_table WHERE user_id =:userId ORDER BY id DESC")
     List<JournalEntity> getAll(String userId);
 
 

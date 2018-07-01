@@ -39,6 +39,6 @@ public interface JournalDAO {
      * Updating only saved
      * By customer phone
      */
-    @Query("UPDATE journal_table SET journal_entry=:journalEntry and updated_at = :updatedAt WHERE id = :journalId")
-    void update(String journalEntry, Date updatedAt, int journalId);
+    @Query("UPDATE journal_table SET title=:title and journal_entry=:journalEntry and updated_at = :updatedAt WHERE id = :journalId")
+    void update(String title, String journalEntry, Date updatedAt, int journalId);
 }

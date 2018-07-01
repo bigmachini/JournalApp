@@ -40,7 +40,7 @@ public class JournalController extends BaseController {
 
     public void updateJournal(JournalEntity journalEntity) {
         Date dateUpdated = new Date();
-        mJournalDao.update(journalEntity.getJournalEntry(), dateUpdated, journalEntity.getId());
+        mJournalDao.update(journalEntity.getTitle(), journalEntity.getJournalEntry(), dateUpdated, journalEntity.getId());
     }
 
     public void deleteAllJournals() {

@@ -28,6 +28,7 @@ public class JournalDetailsActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(JournalDetailsActivity.this, JournalCreateActivity.class));
+                finish();
             }
         });
 

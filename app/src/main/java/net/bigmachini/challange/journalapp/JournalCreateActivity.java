@@ -71,12 +71,17 @@ public class JournalCreateActivity extends BaseActivity {
                 if(Constants.gSelectedEntry == null) {
                     mJournalController.createJournal(journalEntity);
                     Toast.makeText(mContext, "Journal Entry Added ", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(JournalCreateActivity.this, JournalListActivity.class));
                 }
                 else
                 {
+                    journalEntity = new JournalEntity();
+                    journalEntity.setTitle(journalTitle);
+                    journalEntity.setJournalEntry(journalEntry);
+                    journalEntity.setUpdatedAt(new Date());
+                    Toast.makeText(mContext, "Journal Entry updated ", Toast.LENGTH_SHORT).show();
                     mJournalController.updateJournal(journalEntity);
                 }
+                startActivity(new Intent(JournalCreateActivity.this, JournalListActivity.class));
                 finish();
             }
         });

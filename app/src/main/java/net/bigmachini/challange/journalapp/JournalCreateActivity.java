@@ -74,7 +74,7 @@ public class JournalCreateActivity extends BaseActivity {
                 }
                 else
                 {
-                    journalEntity = new JournalEntity();
+                    journalEntity = Constants.gSelectedEntry;
                     journalEntity.setTitle(journalTitle);
                     journalEntity.setJournalEntry(journalEntry);
                     journalEntity.setUpdatedAt(new Date());

@@ -84,4 +84,17 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
+    <string name="title_activity_journal_list">JournalListActivity</string>
+    <string name="title_activity_journal_create">JournalCreateActivity</string>
+    <string name="journal_title">Title</string>
+    <string name="submit">Submit</string>
+    <string name="enter_journal_entry">Enter journal entry</string>
+    <string name="time_created">Time Created</string>
+    <string name="time_last_updated">Time last updated</string>
+    <string name="journal_entry_mandatory">Journal Entry is Mandatory</string>
+    <string name="journal_title_mandatory">Journal title it mandatory</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="title_activity_journal_details">JournalDetailsActivity</string>
+    <string name="date_created">Date Created</string>
+    <string name="time_updated">Last Updated</string>
 </resources>

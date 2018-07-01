@@ -4,19 +4,18 @@
     package="net.bigmachini.challange.journalapp">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.AppCompat"
         tools:replace="android:icon">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SignInActivity"
-            android:label="@string/title_activity_sign_in"
+            android:label="@string/title_activity_journal_list"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +23,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BaseActivity">
-
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".JournalListActivity"
+            android:label="@string/title_activity_journal_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".JournalCreateActivity"
+            android:label="@string/title_activity_journal_create"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".JournalDetailsActivity"
+            android:label="@string/title_activity_journal_details"
+            android:parentActivityName=".JournalListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.bigmachini.challange.journalapp.JournalListActivity" />
         </activity>
     </application>
 
